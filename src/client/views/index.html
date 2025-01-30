@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+        <title>Sentiment Analyzer</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="">
+                Sentiment Analyzer
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form id="urlForm">
+                    <input id="name" type="text" name="url" placeholder="Enter URL" required>
+                    <button id="submitButton" type="submit">Submit</button>
+                </form>
+                
+            </section>
+
+            <section>
+                <strong>Form Results:</strong>
+                <div id="polarity"></div>
+                <div id="agreement"></div>
+                <div id="subjectivity"></div>
+                <div id="confidence"></div>
+                <div id="irony"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Sentiment Analyzer 2024</p>
+        </footer>
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+        
+    </body>
+</html>

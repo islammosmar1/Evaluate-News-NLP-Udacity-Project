@@ -1,0 +1,8 @@
+$font-family:"DM Serif Display", serif;
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px 40px;
+    font-size: 40px;
+    font-family: $font-family;
+}
